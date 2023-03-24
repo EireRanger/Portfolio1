@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<!--The buttons below relate to the Yes and No functions eg. click me would trigger the Yes function.   -->
+	<button onclick="Yes()" >Click Me</button>
+	<button onclick="No()" >Not Click Me</button>
+
+	<!--Img Src line would relate to the Document.getElementById na d the file (Dice)-->
+	<img src="" id ="dice">
+
+<script type="text/javascript">
+	
+// This is the YES function "Click Mee" button and will generate a random number between 1 & 6. This would now pick up the If statment below depending on the number generated.
+function Yes() {
+	// this line generates the random number between 1 & 6
+var randomNumber = Math.floor((Math.random() *6) +1);
+	// Depending on the random number generated this would look at the if statments below. For example if 2 was generated it would looking at the document.getElementById and with the command line and would refer to the img scr"" id = "dice" and would place pic2.jpg on the HTML page.
+if (randomNumber == 1){
+document.getElementById('dice').src = "img/pic1.jpg";
+}
+else if (randomNumber == 2){
+document.getElementById('dice').src = "img/pic2.jpg";
+}
+else if (randomNumber == 3){
+document.getElementById('dice').src = "img/pic3.jpg";
+}
+else if (randomNumber == 4){
+document.getElementById('dice').src = "img/pic4.jpg";
+}
+else if (randomNumber == 5){
+document.getElementById('dice').src = "img/pic5.jpg";
+}
+else if (randomNumber == 6){
+document.getElementById('dice').src = "img/pic6.jpg";
+}
+}
+// This is the No function "Not Click Me " button this would generate randomly 1 of the three messages in the var messeges line and would alert this out to the HTML page.
+function No() {
+
+
+var messages =["Please roll he dice","Go on","Please do it"];
+// the line below randomly generates one of the messages above. 
+var result = Math.floor(Math.random() *3);
+
+// the line below send the message out as an alert.
+alert(messages[result]);
+
+
+
+
+
+}
+
+
+</script>
+
+</body>
+</html>
